@@ -1,8 +1,19 @@
 <resources>
     <string name="app_name">Banking App</string>
-    <string name="customers">Customers</string>
+    <string name="persons">Persons</string>
     <string name="transactions">Transactions</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">About</string>
     <string name="welcome_to_about_fragment">Welcome to About Fragment</string>
+    <string name="about_the_developer">About The Developer</string>
+    <string name="internship_logo">Internship Logo</string>
+    <string name="my_photo">my photo</string>
+    <string name="my_name">Ammar Yasser Fahmy</string>
+    <string name="ammar_yasser_fahmy">Ammar Yasser Fahmy</string>
+    <string name="my_email">ammaryasser3016@gmail.com</string>
+    <string name="grip">GRIP | The Sparks Foundation Internship</string>
+    <string name="gripjune2023">#GRIPJune2023</string>
+    <string name="basic_banking_app">Basic Banking App</string>
+    <string name="calender">calender</string>
+    <string name="group">group</string>
+
 </resources>

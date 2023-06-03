@@ -1,15 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragments.AboutFragment"
     android:id="@+id/about_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/about_developer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/welcome_to_about_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:text="@string/about_the_developer"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/internship_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/internship_logo"
+        app:layout_constraintTop_toBottomOf="@id/about_developer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/internship_logo" />
+
+    <LinearLayout
+        android:id="@+id/name_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/internship_logo">
+
+        <ImageView
+            android:id="@+id/person"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/baseline_person_24"
+            android:contentDescription="@string/my_name" />
+
+        <TextView
+            android:id="@+id/my_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:textColor="@color/black"
+            android:text="@string/ammar_yasser_fahmy"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/email_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/name_linear">
+
+        <ImageView
+            android:id="@+id/emailIV"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/baseline_email_24"
+            android:contentDescription="@string/my_email" />
+
+        <TextView
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:textColor="@color/black"
+            android:text="@string/my_email"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/group_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/email_linear">
+
+        <ImageView
+            android:id="@+id/icon_group"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/baseline_groups_24"
+            android:contentDescription="@string/group" />
+
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:textColor="@color/black"
+            android:text="@string/grip"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/calender_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/group_linear">
+
+        <ImageView
+            android:id="@+id/calenderIV"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/baseline_calendar_month_24"
+            android:contentDescription="@string/calender" />
+
+        <TextView
+            android:id="@+id/calenderTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:textColor="@color/black"
+            android:text="@string/gripjune2023"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/app_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/calender_linear">
+
+        <ImageView
+            android:id="@+id/appIV"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/baseline_account_balance_24"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:textColor="@color/black"
+            android:text="@string/basic_banking_app"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

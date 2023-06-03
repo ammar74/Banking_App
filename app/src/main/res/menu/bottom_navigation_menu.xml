@@ -2,19 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/customers"
+        android:id="@+id/customersFragment"
         android:icon="@drawable/baseline_person_24"
-        android:title="@string/customers"
-        app:showAsAction="ifRoom" />
+        android:title="@string/persons" />
 
     <item
-        android:id="@+id/transactions"
+        android:id="@+id/transactionsFragment"
         android:icon="@drawable/baseline_attach_money_24"
-        android:title="@string/transactions"
-        app:showAsAction="always" />
+        android:title="@string/transactions" />
     <item
-        android:id="@+id/about"
+        android:id="@+id/aboutFragment"
         android:icon="@drawable/baseline_info_24"
-        android:title="About"
-        app:showAsAction="always" />
+        android:title="@string/about" />
 </menu>
