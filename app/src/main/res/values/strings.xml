@@ -15,5 +15,18 @@
     <string name="basic_banking_app">Basic Banking App</string>
     <string name="calender">calender</string>
     <string name="group">group</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_email">Customer Email</string>
+    <string name="customer_balance">Customer Balance</string>
+    <string name="do_transaction">Do Transaction</string>
+    <string name="EnterAmount">Enter Amount</string>
+    <string name="warning">amount can\'t be Empty</string>
+    <string name="balance_warning">You don\'t have Enough Money</string>
+    <string name="please_select_a_customer">Please Select a Customer</string>
+    <string name="success">Successful Transaction</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
 
 </resources>

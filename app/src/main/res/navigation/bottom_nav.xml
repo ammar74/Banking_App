@@ -7,17 +7,63 @@
 
     <fragment
         android:id="@+id/customersFragment"
-        android:name="fragments.CustomersFragment"
+        android:name="com.example.bankingapp.customers.CustomersFragment"
         android:label="fragment_customer"
-        tools:layout="@layout/fragment_customer" />
+        tools:layout="@layout/fragment_customer" >
+        <action
+            android:id="@+id/action_customersFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.bankingapp.details.DetailsFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="customer"
+            app:argType="com.example.bankingapp.db.Customer" />
+        <action
+            android:id="@+id/action_detailsFragment_to_transferFragment"
+            app:destination="@id/transferFragment" />
+    </fragment>
     <fragment
         android:id="@+id/transactionsFragment"
-        android:name="fragments.TransactionsFragment"
+        android:name="com.example.bankingapp.transactions.TransactionsFragment"
         android:label="fragment_transactions"
         tools:layout="@layout/fragment_transactions" />
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="fragments.AboutFragment"
+        android:name="com.example.bankingapp.fragments.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/transferFragment"
+        android:name="com.example.bankingapp.transfer.TransferFragment"
+        android:label="TransferFragment"
+        tools:layout="@layout/fragment_transfer">
+        <argument
+            android:name="transferor"
+            app:argType="string" />
+
+        <argument
+            android:name="transferor_id"
+            app:argType="integer" />
+
+        <argument
+            android:name="amount"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_transferFragment_to_customersFragment"
+            app:destination="@id/customersFragment"
+            app:popUpTo="@id/customersFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.bankingapp.MainActivity"
+        android:label="MainActivity"
+        tools:layout="@layout/activity_main"/>
+
 </navigation>

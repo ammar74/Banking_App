@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="10dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+        <variable
+            name="customer"
+            type="com.example.bankingapp.db.Customer" />
+
+        <variable
+            name="clickListener"
+            type="com.example.bankingapp.customers.ItemClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:onClick="@{() -> clickListener.onClick(customer)}">
 
-</androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/balance"
+                android:lines="1"
+                android:text="@{customer.name}"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="@string/my_name" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:text="@{customer.email}"
+                android:gravity="center|start"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                tools:text="@string/my_email" />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center|start"
+                loadBalance="@{customer.balance}"
+                android:padding="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:text="$ 1000.0" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

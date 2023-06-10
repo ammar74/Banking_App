@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="fragments.AboutFragment"
+    android:background="@color/teal_200"
+    tools:context="com.example.bankingapp.fragments.AboutFragment"
     android:id="@+id/about_fragment">
 
     <TextView
@@ -37,7 +39,8 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/internship_logo">
+        app:layout_constraintTop_toBottomOf="@id/internship_logo"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/person"
@@ -68,7 +71,8 @@
         android:layout_marginBottom="10dp"
         android:layout_marginVertical="10dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/name_linear">
+        app:layout_constraintTop_toBottomOf="@id/name_linear"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/emailIV"
@@ -97,7 +101,8 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/email_linear">
+        app:layout_constraintTop_toBottomOf="@id/email_linear"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/icon_group"
@@ -126,7 +131,8 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/group_linear">
+        app:layout_constraintTop_toBottomOf="@id/group_linear"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/calenderIV"
@@ -155,7 +161,8 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/calender_linear">
+        app:layout_constraintTop_toBottomOf="@id/calender_linear"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/appIV"
