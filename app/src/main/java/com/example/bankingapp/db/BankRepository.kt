@@ -8,7 +8,11 @@ class BankRepository(private val bankDao: BankDao) {
         return bankDao.getCustomers()
     }
 
-    val allTransactions: Flow<List<Transaction>> = bankDao.getTransactions()
+    fun getTransactions(): Flow<List<Transaction>>{
+        return bankDao.getTransactions()
+    }
+
+    //val allTransactions: Flow<List<Transaction>> = bankDao.getTransactions()
 
     suspend fun insertTransactionAndUpdate(transaction: Transaction): Result<Int>{
         return try {

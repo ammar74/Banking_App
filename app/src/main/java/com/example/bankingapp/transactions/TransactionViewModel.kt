@@ -1,4 +1,4 @@
-package ccom.example.bankingapp.transactions
+package com.example.bankingapp.transactions
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,19 +10,18 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class TransactionViewModel
-@Inject constructor(private val bankRepository: BankRepository) : ViewModel() {
-    val allTransactions = MutableLiveData< List<Transaction?>>()
+class TransactionViewModel @Inject constructor(private val bankRepository: BankRepository) : ViewModel() {
+    val transactionsListLiveData = MutableLiveData< List<Transaction?>>()
 
     init {
-        getTransactions()
+        getAllTransactions()
     }
 
 
-    private fun getTransactions(){
+    private fun getAllTransactions(){
     viewModelScope.launch {
-        bankRepository.allTransactions.collect{
-            allTransactions.value=it
+        bankRepository.getTransactions().collect{//allTransactions
+            transactionsListLiveData.value=it
         }
     }
 

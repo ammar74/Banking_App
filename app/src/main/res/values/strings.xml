@@ -24,7 +24,7 @@
     <string name="EnterAmount">Enter Amount</string>
     <string name="warning">amount can\'t be Empty</string>
     <string name="balance_warning">You don\'t have Enough Money</string>
-    <string name="please_select_a_customer">Please Select a Customer</string>
+    <string name="please_select_the_receiver">Please Select the Receiver</string>
     <string name="success">Successful Transaction</string>
     <string name="from">From</string>
     <string name="to">To</string>

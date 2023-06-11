@@ -18,13 +18,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
 
             <TextView
                 android:id="@+id/from"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/from"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 android:layout_margin="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="@{transaction.transferor}"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/from"
                 app:layout_constraintStart_toEndOf="@id/from"
                 app:layout_constraintTop_toTopOf="@id/from"
@@ -46,6 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="@string/to"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/from" />
@@ -56,6 +63,7 @@
                 android:layout_margin="5dp"
                 android:layout_height="wrap_content"
                 android:text="@{transaction.transferee}"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/to"
                 app:layout_constraintStart_toEndOf="@id/to"
                 app:layout_constraintTop_toTopOf="@id/to"
@@ -63,10 +71,12 @@
 
             <TextView
                 android:id="@+id/amount"
-                loadBalance="@{transaction.amount}"
                 android:layout_width="wrap_content"
-                android:layout_margin="5dp"
                 android:layout_height="wrap_content"
+                loadBalance="@{transaction.amount}"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

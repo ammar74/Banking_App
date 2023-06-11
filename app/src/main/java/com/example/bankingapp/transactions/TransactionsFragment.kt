@@ -7,15 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import ccom.example.bankingapp.transactions.TransactionViewModel
 import com.example.bankingapp.databinding.FragmentTransactionsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TransactionsFragment : Fragment() {
     private var binding: FragmentTransactionsBinding? = null
     private lateinit var transactionsAdapter: TransactionsAdapter
     private val transactionViewModel: TransactionViewModel by viewModels()
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +29,7 @@ class TransactionsFragment : Fragment() {
         binding?.TransactionsList?.adapter = transactionsAdapter
         binding?.TransactionsList?.layoutManager = LinearLayoutManager(requireContext())
 
-        transactionViewModel.allTransactions.observe(viewLifecycleOwner) { transactions ->
+        transactionViewModel.transactionsListLiveData.observe(viewLifecycleOwner) { transactions ->
             transactions.let { transactionsAdapter.submitList(it) }
         }
     }

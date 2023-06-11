@@ -16,7 +16,7 @@
             android:padding="20dp"
             android:textColor="@color/black"
             android:gravity="center_horizontal"
-            android:text="@string/please_select_a_customer"
+            android:text="@string/please_select_the_receiver"
             android:textSize="25sp"
             android:textStyle="bold" />
 

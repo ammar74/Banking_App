@@ -29,9 +29,6 @@ class CustomersViewModel  @Inject constructor(private val bankRepository: BankRe
     fun doneNavigating() {
         _detailedCustomer.value = null
     }
-
-
-
     private fun getAllCustomers() {
         viewModelScope.launch {
             bankRepository.getCustomers().collect{

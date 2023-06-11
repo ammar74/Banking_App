@@ -11,13 +11,6 @@ import com.example.bankingapp.db.Transaction
 class TransactionsAdapter :
     ListAdapter<Transaction, TransactionsAdapter.TransactionViewHolder>(DiffCallback()) {
 
-    class TransactionViewHolder(private val binding: TransactionsListItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(transaction: Transaction) {
-            binding.transaction = transaction
-            binding.executePendingBindings()
-        }
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransactionViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -28,6 +21,14 @@ class TransactionsAdapter :
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         val item = getItem(position)
         holder.bind(item)
+    }
+
+    class TransactionViewHolder(private val binding: TransactionsListItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(transaction: Transaction) {
+            binding.transaction = transaction
+            binding.executePendingBindings()
+        }
     }
 
     class DiffCallback : DiffUtil.ItemCallback<Transaction>() {
